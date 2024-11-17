@@ -1,0 +1,74 @@
+/* Estilo geral da página de históricos */
+.historico-container {
+    padding: 20px;
+    background-color: #f7f9fc;
+    min-height: 100vh;
+  }
+  
+  .historico-title {
+    font-size: 2rem;
+    color: #4c6ef5;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: -0.5px;
+  }
+  
+  .no-historicos {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    font-weight: 500;
+  }
+  
+  .historico-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .historico-table thead {
+    background-color: #4c6ef5;
+    color: white;
+  }
+  
+  .historico-table th, .historico-table td {
+    padding: 12px;
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .historico-table th {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .historico-table tbody tr {
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .historico-table tbody tr:hover {
+    background-color: #f1f7ff; 
+  }
+  
+  .historico-table td {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .historico-table th, .historico-table td {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  
+    .historico-title {
+      font-size: 1.5rem;
+    }
+  }
+  

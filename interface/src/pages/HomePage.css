@@ -1,0 +1,61 @@
+/* Estilos para a página Home */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+    text-align: center;
+  }
+  
+  .home-header {
+    margin-bottom: 50px;
+  }
+  
+  .home-header h1 {
+    font-size: 36px;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .home-header p {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+  }
+  
+  .home-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  button {
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    min-width: 200px;
+  }
+  
+  .btn-login {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btn-login:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-register {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .btn-register:hover {
+    background-color: #218838;
+  }
+  

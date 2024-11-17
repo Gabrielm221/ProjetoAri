@@ -1,0 +1,52 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Usuario {
+  id              Int          @id @default(autoincrement())
+  nome            String
+  email           String       @unique
+  senha           String
+  data_nascimento DateTime
+  status          Boolean      @default(true)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime
+  Prescricao      Prescricao[]
+}
+
+model Prescricao {
+  id                 Int         @id @default(autoincrement())
+  id_usuario         Int
+  observacao         String?
+  id_remedio         Int
+  frequencia_valor   Int
+  frequencia_unidade String
+  dt_inicio          DateTime
+  dt_fim             DateTime
+  status             Boolean     @default(true)
+  Historico          Historico[]
+  Remedio            Remedio     @relation(fields: [id_remedio], references: [id])
+  Usuario            Usuario     @relation(fields: [id_usuario], references: [id])
+}
+
+model Historico {
+  id            Int        @id @default(autoincrement())
+  id_prescricao Int
+  dt_atual      DateTime
+  status        Boolean    @default(true)
+  Prescricao    Prescricao @relation(fields: [id_prescricao], references: [id])
+}
+
+model Remedio {
+  id         Int          @id @default(autoincrement())
+  nome       String
+  funcao     String
+  dosagem    Float
+  status     Boolean      @default(true)
+  Prescricao Prescricao[]
+}

@@ -1,0 +1,44 @@
+.logout-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px;
+    background-color: #f4f7fc;
+    min-height: 100vh;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #4c6ef5;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  .logout-container {
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 40px;
+    margin-top: 20px; 
+  }
+  
+  @media (max-width: 500px) {
+    .logout-container {
+      padding: 20px;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  
